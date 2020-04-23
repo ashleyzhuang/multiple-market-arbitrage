@@ -18,7 +18,7 @@ def load_data():
         cleaned_marks.append(consol)
 
 # Detects arbitrage for a given market
-# Returns tuple of minimum profit for buying all no's and buying all yes's
+# Returns tuple of profit for buying all no's and buying all yes's
 def detect_arb(mark):
     contracts = mark['cont']
     prices_no = []
@@ -54,7 +54,7 @@ def print_arb(mark):
     else:
         print('Buy No\'s: No Arbitrage :(')
 
-    print('Minimum profit: ', profit_no)
+    print('Profit: ', profit_no)
     print()
 
     if profit_yes and profit_yes > 0:
@@ -62,7 +62,7 @@ def print_arb(mark):
     else:
         print('Buy Yes\'s: No Arbitrage :(')
 
-    print('Minimum profit: ', profit_yes)
+    print('Profit: ', profit_yes)
     print('------------------------------------------------------------------')
 
 # Prints out all markets with arbitrage
@@ -83,7 +83,7 @@ def all_arbs():
     arb_yes.sort(key = lambda x: x[1], reverse=True)
 
     for tup in arb_no:
-        mark = tup[0]
+        mark = tup[0]1
         profit = tup[1]
         print('ID:', mark['id'], '\nMarket:', mark['name'], )
         print('Buying no\'s min profit:', profit)
@@ -97,7 +97,6 @@ def all_arbs():
         print()
 
     print('TOTAL instances of arbitrage:', len(arb_no) + len(arb_yes))
-
 
 load_data()
 
