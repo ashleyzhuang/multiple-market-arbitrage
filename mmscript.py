@@ -83,7 +83,7 @@ def all_arbs():
     arb_yes.sort(key = lambda x: x[1], reverse=True)
 
     for tup in arb_no:
-        mark = tup[0]1
+        mark = tup[0]
         profit = tup[1]
         print('ID:', mark['id'], '\nMarket:', mark['name'], )
         print('Buying no\'s min profit:', profit)
