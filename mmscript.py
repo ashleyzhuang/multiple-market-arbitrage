@@ -37,7 +37,7 @@ def detect_arb(mark):
         profit_no = round(0.9 * (gain - loss), 2)
     if prices_yes:
         cost = sum(prices_yes)
-        profit_yes = round(0.9 * (1 - cost), 1)
+        profit_yes = round(0.9 * (1 - cost), 2)
 
     # Markets with only 1 contract
     if len(prices_no) == 1:
