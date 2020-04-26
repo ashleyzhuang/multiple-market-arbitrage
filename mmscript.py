@@ -83,7 +83,7 @@ def all_arbs():
         if profit_no and profit_no > 0:
             arb_no.append((mark, profit_no))
         if profit_yes and profit_yes > 0:
-            arb_no.append((mark, profit_yes))
+            arb_yes.append((mark, profit_yes))
 
     arb_no.sort(key = lambda x: x[1], reverse=True)
     arb_yes.sort(key = lambda x: x[1], reverse=True)
