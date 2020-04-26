@@ -39,6 +39,10 @@ def detect_arb(mark):
         cost = sum(prices_yes)
         profit_yes = round(1 - cost, 1)
 
+    # Markets with only 1 contract
+    if len(contracts) == 1:
+        profit_no, profit_yes = 0, 0
+
     return profit_no, profit_yes
 
 # Prints arbitrage report for a single market
