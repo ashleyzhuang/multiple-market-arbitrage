@@ -34,14 +34,16 @@ def detect_arb(mark):
     if prices_no:
         loss = sum(prices_no)
         gain = len(prices_no) - 1
-        profit_no = round(0.9*(gain - loss), 2)
+        profit_no = round(0.9 * (gain - loss), 2)
     if prices_yes:
         cost = sum(prices_yes)
-        profit_yes = round(0.9*(1 - cost), 1)
+        profit_yes = round(0.9 * (1 - cost), 1)
 
     # Markets with only 1 contract
-    if len(contracts) == 1:
-        profit_no, profit_yes = 0, 0
+    if len(prices_no) == 1:
+        profit_no = 0
+    if len(prices_yes) == 1:
+        profit_yes = 0
 
     return profit_no, profit_yes
 
