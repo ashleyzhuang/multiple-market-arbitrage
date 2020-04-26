@@ -90,14 +90,14 @@ def all_arbs():
         mark = tup[0]
         profit = tup[1]
         print('ID:', mark['id'], '\nMarket:', mark['name'], )
-        print('Buying no\'s min profit:', profit)
+        print('Buying no\'s profit:', profit)
         print()
 
     for tup in arb_yes:
         mark = tup[0]
         profit = tup[1]
         print('Market:', mark['name'], '\nID:', mark['id'])
-        print('Buying yes\'s min profit:', profit)
+        print('Buying yes\'s profit:', profit)
         print()
 
     print('TOTAL instances of arbitrage:', len(arb_no) + len(arb_yes))
